@@ -30,15 +30,17 @@ var lettersToPossibleWords = function(letterArrays=[[]]) {
 	var recurse = function(active='', remaining=[], storage=[]) {
 		console.log("active, remaining", active, remaining);
 		if (active.length===0 && remaining.length===0) return;
+		// base case
 		if (remaining.length===0) {
 			storage.push(active);
 		} else {
-			// remove any empty array
-			if (remaining[0].length===0) remaining=remaining.splice(1);
-			// TODO fix this
-			for (let i in remaining[0]) {
-				var nextRemaining=remaining.shift();
-				recurse(active+remaining[0][i], nextRemaining, storage);
+			let i=0;
+			let n=remaining[0].length;
+			while (n>0 && i<n) {
+				let nextActive=active+remaining[0][i];
+				console.log("nextActive, remaining.slice(1)", nextActive, remaining.slice(1));
+				recurse(nextActive, remaining.slice(1), storage);
+				i++;
 			}
 		}
 		return storage;
