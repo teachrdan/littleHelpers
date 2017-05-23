@@ -1,0 +1,28 @@
+{
+  "name": "littlehelpers",
+  "version": "1.0.0",
+  "description": "JavaScript helper functions",
+  "main": "arrayCombos.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/teachrdan/littleHelpers.git"
+  },
+  "keywords": [
+    "JavaScript",
+    "helper",
+    "helpers",
+    "convenience"
+  ],
+  "author": "Dan Tennery-Spalding",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/teachrdan/littleHelpers/issues"
+  },
+  "homepage": "https://github.com/teachrdan/littleHelpers#readme",
+  "dependencies": {
+    "nspell": "^1.0.2"
+  }
+}
